@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #0c0000;
+    color: hsl(0, 0%, 100%);
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(I\ am\ a\ \(1\).gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.container{
+    padding: 10px 10%; 
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul {
+    position: fixed;
+    z-index: 3;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 30px 25px;
+}
+nav ul li a{
+    color: hsl(0, 100%, 100%);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #0898dbf1;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 25%;
+}
+.header-text h1 span{
+    color: #16eedcf1;
+}
+
+main {
+    padding: 20px;
+}
+
+.about, .projects, .contact, .experience, .education, .expertice {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgb(19, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #02eeee;
+}
+#experience{
+    padding: 40px 0;
+    color: #f7f4f4;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #67dfdff1;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transform: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* ---------------content-style--------------- */
+.content-style{
+    margin: 40px 0;
+    font-size: 20px;
+}
+.content-style h2{
+    font-size: 20px;
+    color: #12e9e9f1;
+}
+.content-style h3{
+    font-size: 18px;
+    color: #fffefe;
+}
+.content-style p{
+    font-size: 20px;
+    margin-top: 15px;
+}
+/* ---------------about--------------- */
+#about{
+    padding: 50px 0;
+    color: #ababab
+}
+.info-col p{
+    margin-top: 30px;
+    font-size: 22px;
+    max-width: 80%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: hsl(0, 100%, 98%);
+}
+/* ---------------experience--------------- */
+#experience{
+    padding: 40px 0;
+    color: #fdfafa;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #15c5f1f1;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transform: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* ---------------education--------------- */
+#education{
+    padding: 40px 0;
+    color: #ababab;
+}
+/* ---------------expertice--------------- */
+#expertice{
+    padding: 40px 0;
+    color: #ababab;
+} 
+/* ---------------projects--------------- */
+#projects{
+    padding: 40px 0;
+} 
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.project img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(9, 226, 172, 0.5), #000c0ef1);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    font-weight: 500;
+}
+.layer h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #000707f1;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #eeeff0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.project:hover img{
+    transform: scale(1.1);
+}
+.project:hover .layer{
+    height: 100%;
+}
+/* ---------------contact--------------- */
+.contact-col{
+    flex-basis: 35%;
+}
+.contact-col p{
+    margin-top: 30px;
+}
+.contact-col p i{
+    color: #00e4e4fb;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #fffcfc;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #0ef0e5f1;
+    transform: translateY(-5px);
+}
+.btn{
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #0bc3e4;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #030000;
+    transition: background 0.2s;
+}
+.btn:hover{
+    background: #08ddddf1; 
+}
+.footer{
+    text-align: center;
+}
+/* ---------------css for small screens--------------- */
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(I am a (1).gif);
+    }
+    .header-text{
+        margin-top: 120%;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    .fa-bars{
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        color: #5b1b8bf1;
+        z-index: 2;
+    }
+    nav ul{
+        background: #06d2e0f1;
+        left: auto;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 3;
+        transition: right 0.5s;
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .info-col h1{
+        font-size: 40px;
+    }
+    .info-col p{
+        font-size: 19px;
+        max-width: 88%;
+    }
+}
